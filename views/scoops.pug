@@ -9,6 +9,11 @@ block content
         .col-sm-4(style="cursor: pointer", onclick=`buy(${index})`)
           h4= scoop.scoopFlavor
           p Flavor: #{scoop.scoopFlavor}
-          p Size: #{scoop.scoopSize}
+          p Quantity : #{scoop.scoopSize}
           p Color: #{scoop.scoopColor}
           p Price: $#{scoop.scoopPrice.toFixed(2)}
+
+  script.
+    function buy(index) {
+      alert(`You purchased item ${index}`);
+    }
